@@ -26,6 +26,7 @@ export type Card = {
     defaultPower: number;
     trump: string;
     presentStrength: number;
+    _id: string;
   };
   
 
@@ -36,4 +37,5 @@ export type ClientKardOnlineSession = {
     enemy: number;
     count: number;
     field: Card[];
+    sequence?: boolean;
   };

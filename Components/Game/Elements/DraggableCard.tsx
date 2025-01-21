@@ -1,22 +1,22 @@
-
 import style from '@/style/Game.module.scss';
 import Image from 'next/image';
 import { useDrag } from 'react-dnd';
 import { useRef } from 'react';
 
 type DragProps = {
-    imgPath: string
+    imgPath: string;
+    dragType: string;
+    idGame: string;
+    idCard: string;
 }
 
-function DraggableCard({imgPath}: DragProps) {
+function DraggableCard({imgPath, dragType, idGame, idCard}: DragProps) {
     const dragRef = useRef<HTMLDivElement>(null);
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [{isDragging}, connectDragSource] = useDrag(() => ({
-        type: 'card',
-        item: {imgPath},
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging(),
-        }),
+    const [,connectDragSource] = useDrag(() => ({
+        type: dragType,
+        item: {idGame, idCard},
+        
     }));
     connectDragSource(dragRef);
     return (
