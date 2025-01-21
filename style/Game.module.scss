@@ -1,0 +1,48 @@
+.game {
+    width: 100%;
+    height: 100vh;
+    padding-top: 20px;
+
+    .player_card{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        gap: 20px;
+        justify-content: center;
+
+        .player_item{
+            width: 75px;
+            height: 130px;
+        }
+    } 
+
+    .game_enemy {
+        height: 200px;
+      
+}
+
+    .game_field {
+        height: 200px;
+        background-color: blue;
+    }
+
+    .game_interface {
+        height: 50px;
+        background-color: red;
+    }
+
+    .game_player {
+        height: 350px;
+        padding-top: 10px;
+           
+            .player_item:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                box-shadow: 13px 15px 11px rgba(228, 215, 22, 0.5);
+                transition: all 0.2s ease-in-out;
+            }
+
+        }
+    }
+
